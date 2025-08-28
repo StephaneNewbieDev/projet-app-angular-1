@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-artisans',
-  standalone: false,
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './artisans.html',
   styleUrls: ['./artisans.scss']
 })
-
 export class ArtisansComponent {
   artisans = [
     { id: 1, name: 'Jean Dupont', specialty: 'Menuisier', note: 4.5, location: 'Paris' },

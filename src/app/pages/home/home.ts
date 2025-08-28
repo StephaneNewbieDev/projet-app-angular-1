@@ -1,10 +1,12 @@
 import { Component, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArtisanService } from '../../artisan.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  standalone: false,
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.html',
   styleUrls: ['./home.scss']
 })
