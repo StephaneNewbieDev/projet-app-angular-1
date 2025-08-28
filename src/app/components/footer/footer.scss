@@ -1,0 +1,20 @@
+$footer-bg: #f1f8fc;
+$text-color: #384050;
+
+.footer {
+  background-color: $footer-bg !important;
+  color: $text-color;
+  
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: #0074c7; // Couleur au survol
+    }
+  }
+
+  .container {
+    padding-top: 1rem;
+  }
+}

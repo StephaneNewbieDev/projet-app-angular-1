@@ -1,0 +1,41 @@
+$header-bg: #f1f8fc;
+$primary-color: #0074c7;
+$secondary-color: #00497c;
+$text-color: #384050;
+
+.navbar {
+  background-color: $header-bg !important;
+
+  .navbar-brand {
+    padding-left: 1rem;
+  }
+
+  .nav-link {
+    color: $text-color !important;
+    font-weight: 500;
+
+    &:hover, &.active {
+      color: $primary-color !important;
+    }
+  }
+
+  .form-control {
+    border-radius: 20px;
+    border: 1px solid $secondary-color;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+}

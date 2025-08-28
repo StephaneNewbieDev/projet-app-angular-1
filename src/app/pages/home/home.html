@@ -1,0 +1,51 @@
+<div class="container my-5">
+  <section class="how-to">
+    <h2 class="text-center mb-4">Comment trouver mon artisan ?</h2>
+    <div class="row">
+      <div class="col-md-3 text-center mb-3">
+        <div class="card p-3 h-100">
+          <span class="step-number">1</span>
+          <p>Choisir la catégorie d’artisanat dans le menu.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center mb-3">
+        <div class="card p-3 h-100">
+          <span class="step-number">2</span>
+          <p>Choisir un artisan.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center mb-3">
+        <div class="card p-3 h-100">
+          <span class="step-number">3</span>
+          <p>Le contacter via le formulaire de contact.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center mb-3">
+        <div class="card p-3 h-100">
+          <span class="step-number">4</span>
+          <p>Une réponse sera apportée sous 48h.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <section class="artisans-of-the-month">
+    <h2 class="text-center mb-4">Les trois artisans du mois</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let artisan of artisansDuMois">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ artisan.name }}</h5>
+            <p class="card-text text-muted">{{ artisan.specialty }}</p>
+            <p class="card-text">
+              Note : {{ artisan.note }} <span class="stars" []="{'filled': true}">★★★★★</span>
+            </p>
+            <p class="card-text">{{ artisan.location }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
