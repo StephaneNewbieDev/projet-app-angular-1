@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importation de polices de caractères */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Styles globaux pour le corps de la page */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8; /* Gris très clair pour le fond */
+  color: #333; /* Couleur de texte par défaut */
+}
+
+/* Styles pour les liens */
+a {
+  color: #0056b3; /* Bleu standard */
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+@import 'bootstrap/scss/bootstrap';

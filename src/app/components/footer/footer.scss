@@ -1,20 +1,33 @@
-$footer-bg: #f1f8fc;
-$text-color: #384050;
-
 .footer {
-  background-color: $footer-bg !important;
-  color: $text-color;
-  
-  a {
-    color: $text-color;
-    text-decoration: none;
+  background-color: #333; /* Gris très foncé */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 3rem; /* Espace au-dessus du footer */
 
-    &:hover {
-      color: #0074c7; // Couleur au survol
-    }
+  p {
+    margin: 0.5rem 0;
   }
 
-  .container {
-    padding-top: 1rem;
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    li {
+      margin: 0 1rem;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }

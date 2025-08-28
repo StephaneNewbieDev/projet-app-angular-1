@@ -1,22 +1,76 @@
-.stars {
-  color: lightgray;
-}
-.filled {
-  color: #0074c7;
-}
-.card-footer {
-  background-color: #f1f8fc;
-  border-top: 1px solid #dee2e6;
-}
-.btn-primary {
-  background-color: #0074c7;
-  border-color: #0074c7;
-  color: white;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
+.artisans-container {
+  padding: 2rem;
+  max-width: 1200px; /* Largeur maximale comme le site de la région */
+  margin: 2rem auto; /* Centrer le contenu */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Ombre plus prononcée */
 
-  &:hover {
-    background-color: #00497c;
-    border-color: #00497c;
+  h1 {
+    color: #0056b3; /* Bleu du header */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
+    gap: 1.5rem; /* Espacement entre les cartes */
+
+    .card {
+      border: 1px solid #eee; /* Bordure légère */
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Ombre pour les cartes */
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px); /* Effet au survol */
+      }
+
+      .card-body {
+        padding: 1.5rem;
+        background-color: white;
+
+        h5 {
+          color: #333;
+          font-size: 1.4rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: #666;
+          font-size: 1rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .card-text.note {
+          font-weight: bold;
+          color: #0056b3;
+        }
+      }
+
+      .card-footer {
+        padding: 1rem;
+        background-color: #f4f4f4; /* Fond léger pour le footer de carte */
+        border-top: 1px solid #eee;
+        text-align: center;
+
+        .btn-primary {
+          background-color: #0056b3;
+          color: white;
+          border: none;
+          padding: 0.7rem 1.5rem;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #003d7a;
+          }
+        }
+      }
+    }
   }
 }
