@@ -28,10 +28,10 @@
         </li>
       </ul>
       
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Nom, spécialité ou ville" aria-label="Rechercher">
-        <button class="btn btn-primary" type="submit">Rechercher</button>
-      </form>
+      <form class="d-flex" (ngSubmit)="search(searchTerm.value)">
+  <input class="form-control me-2" type="search" placeholder="Nom, spécialité ou ville" aria-label="Rechercher" #searchTerm>
+  <button class="btn btn-primary" type="submit">Rechercher</button>
+</form>
     </div>
   </div>
 </nav>
