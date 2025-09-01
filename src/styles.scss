@@ -1,5 +1,6 @@
-/* Importation de polices de caractères */
+/* Importation de polices de caractères et de Bootstrap */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import 'bootstrap/scss/bootstrap';
 
 /* Styles globaux pour le corps de la page */
 body {
@@ -14,15 +15,13 @@ body {
 a {
   color: #0056b3; /* Bleu standard */
   text-decoration: none;
+}
 
-  &:hover {
-    text-decoration: underline;
-  }
+/* Correction de la règle a:hover */
+a:hover {
+  text-decoration: underline;
 }
 
 .stars-filled {
   color: gold;
 }
-
-
-@import 'bootstrap/scss/bootstrap';
