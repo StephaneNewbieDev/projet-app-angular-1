@@ -1,59 +1,33 @@
-# ProjetAppAngular1
+# Trouve ton artisan : Application web de mise en relation
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.0.
+Bienvenue sur le projet "Trouve ton artisan", une application web développée avec le framework **Angular (v17+)** qui permet de découvrir et de contacter des artisans locaux. Le site est conçu pour être une plateforme simple et efficace, mettant en avant des professionnels de diverses catégories dans la région Auvergne-Rhône-Alpes.
 
-## Development server
+## Fonctionnalités principales
 
-To start a local development server, run:
+* **Consultation des artisans** : Parcourez la liste complète des artisans ou filtrez-les par spécialité.
+* **Recherche dynamique** : Utilisez la barre de recherche pour trouver un artisan par nom, spécialité ou ville.
+* **Fiches détaillées** : Chaque artisan dispose d'une page dédiée avec ses informations complètes et un formulaire de contact.
+* **Page d'accueil avec mise en avant** : Une sélection d'artisans "top" est mise en avant sur la page d'accueil pour une visibilité accrue.
+* **Page 404 personnalisée** : Une page d'erreur conviviale est affichée pour les URL non valides.
 
+## Prérequis du projet
+
+Assurez-vous que votre environnement de développement est configuré avec les outils suivants pour garantir une installation et un lancement sans problème.
+
+* **Node.js** : Version 18 ou supérieure.
+* **npm** (Node Package Manager) : Version 9 ou supérieure (généralement inclus avec Node.js).
+* **Angular CLI** : Version 17 ou supérieure. Si ce n'est pas le cas, installez-le globalement via le terminal :
+    ```bash
+    npm install -g @angular/cli
+    ```
+
+## Instructions d'installation et de lancement
+
+Suivez ces étapes pour installer et lancer le projet en local.
+
+### 1. Cloner le dépôt
+
+Si le projet est hébergé sur un service comme GitHub, clonez le dépôt dans votre dossier de travail :
 ```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+git clone [URL_DE_VOTRE_DEPOT]
+cd [NOM_DE_VOTRE_PROJET]

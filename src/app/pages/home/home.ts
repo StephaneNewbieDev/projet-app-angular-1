@@ -1,7 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArtisanService } from '../../artisan.service';
 import { RouterModule } from '@angular/router';
+import { ArtisanService } from '../../artisan.service'; // Correction du chemin d'accès
 
 @Component({
   selector: 'app-home',
@@ -11,17 +11,21 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./home.scss']
 })
 export class HomeComponent implements OnInit {
-  artisansDuMois: any[] = []; // Cette propriété contiendra les artisans filtrés
+  // Liste de tous les artisans
+  artisans: any[] = [];
+  // Liste des artisans "top" qui seront affichés sur la page d'accueil
+  artisansDuMois: any[] = [];
 
-  constructor(private artisanService: ArtisanService) {}
+  // Injection du service ArtisanService via le constructeur
+  constructor(private artisanService: ArtisanService) { }
 
   ngOnInit(): void {
-    this.artisanService.getArtisans().subscribe(data => {
-      // Tri des artisans par note décroissante
-      const sortedArtisans = data.sort((a: any, b: any) => b.note - a.note);
-      
-      // Sélection des 3 premiers artisans les mieux notés
-      this.artisansDuMois = sortedArtisans.slice(0, 3);
+    // Appelle le service pour obtenir la liste des artisans
+    this.artisanService.getArtisans().subscribe((data: any[]) => {
+      // Stocke toutes les données des artisans
+      this.artisans = data;
+      // Filtre les artisans pour ne garder que ceux qui ont la propriété 'top' à 'true'
+      this.artisansDuMois = data.filter((artisan: any) => artisan.top === true);
     });
   }
 }
