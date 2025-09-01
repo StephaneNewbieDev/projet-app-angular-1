@@ -19,24 +19,26 @@ export class ArtisanDetailComponent implements OnInit {
     message: ''
   };
 
-  constructor(private route: ActivatedRoute, private artisanService: ArtisanService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private artisanService: ArtisanService
+  ) { }
 
   ngOnInit(): void {
+    const artisanId = this.route.snapshot.paramMap.get('id');
+
+    this.artisanService.getArtisans().subscribe(data => {
+      // Correction ici : Conversion de la chaîne de caractères en nombre
+      this.artisan = data.find((a: any) => a.id === Number(artisanId));
+    });
+  }
+
+  submitForm(): void {
     const artisanId = this.route.snapshot.paramMap.get('id');
 
     // Assurez-vous que l'ID est un nombre avant de le comparer
     this.artisanService.getArtisans().subscribe((data: any[]) => {
       this.artisan = data.find((a: any) => a.id === Number(artisanId));
     });
-  }
-
-  submitForm(): void {
-    console.log('Formulaire soumis:', this.contactForm);
-    alert('Votre message a été envoyé !');
-    this.contactForm = {
-      name: '',
-      subject: '',
-      message: ''
-    };
   }
 }
