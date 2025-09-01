@@ -29,5 +29,5 @@ Suivez ces étapes pour installer et lancer le projet en local.
 
 Si le projet est hébergé sur un service comme GitHub, clonez le dépôt dans votre dossier de travail :
 ```bash
-git clone [URL_DE_VOTRE_DEPOT]
-cd [NOM_DE_VOTRE_PROJET]
+git clone https://github.com/StephaneNewbieDev/projet-app-angular-1.git
+cd projet-app-angular-1
