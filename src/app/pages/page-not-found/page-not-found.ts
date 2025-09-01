@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-page-not-found',
-  standalone: false,
+  standalone: true,
   templateUrl: './page-not-found.html',
   styleUrls: ['./page-not-found.scss']
 })

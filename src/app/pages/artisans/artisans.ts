@@ -19,8 +19,6 @@ export class Artisans implements OnInit {
   ngOnInit(): void {
     this.artisanService.getArtisans().subscribe(data => {
       this.allArtisans = data;
-
-      // Écoute à la fois les paramètres de l'URL (:category) et les paramètres de requête (?q=)
       this.route.paramMap.subscribe(params => {
         const category = params.get('category');
         this.route.queryParamMap.subscribe(queryParams => {
@@ -34,14 +32,12 @@ export class Artisans implements OnInit {
   filterArtisans(category: string | null, searchTerm: string | null): void {
     let tempArtisans = this.allArtisans;
     
-    // Filtre par catégorie si une catégorie est spécifiée
     if (category) {
       tempArtisans = tempArtisans.filter(artisan =>
         artisan.category.toLowerCase() === category.toLowerCase()
       );
     }
     
-    // Filtre par terme de recherche si un terme est spécifié
     if (searchTerm) {
       this.filteredArtisans = tempArtisans.filter(artisan =>
         artisan.name.toLowerCase().includes(searchTerm.toLowerCase()) ||

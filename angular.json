@@ -28,8 +28,8 @@
     "glob": "**/*",
     "input": "public"
   },
-  "src/favicon.ico",
-  "src/assets"
+  "./src/favicon-32.png",
+  "./src/assets"
 ],
             "styles": [
               "src/styles.scss"

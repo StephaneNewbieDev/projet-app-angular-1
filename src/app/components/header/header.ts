@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class Header {
   
-  constructor(private router: Router) {} // Injecte le service Router
+  constructor(private router: Router) {}
 
   search(term: string): void {
     if (term) {

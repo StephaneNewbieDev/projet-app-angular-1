@@ -6,14 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ArtisanService {
-  private artisansUrl = 'assets/datas.json'; // Le chemin vers ton fichier JSON
+
+  private dataUrl = 'assets/datas.json';
 
   constructor(private http: HttpClient) { }
 
-  /**
-   * Méthode pour récupérer la liste des artisans à partir du fichier JSON.
-   */
-  getArtisans(): Observable<any[]> {
-    return this.http.get<any[]>(this.artisansUrl);
+  getArtisans(): Observable<any> {
+    return this.http.get(this.dataUrl);
   }
 }

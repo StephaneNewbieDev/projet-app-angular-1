@@ -1,0 +1,60 @@
+<div class="container my-5">
+  <div *ngIf="artisan">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>{{ artisan.name }}</h1>
+        <p class="text-muted">{{ artisan.specialty }}</p>
+        <p class="h5">Note : {{ artisan.note }} <span class="stars stars-filled">★★★★★</span></p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h2>À propos de nous</h2>
+        <p>{{ artisan.about }}</p>
+      </div>
+      <div class="col-md-6">
+        <h2>Contact</h2>
+        <ul class="list-unstyled">
+          <li><strong>Localisation :</strong> {{ artisan.location }}</li>
+          <li><strong>E-mail :</strong> <a href="mailto:{{ artisan.email }}">{{ artisan.email }}</a></li>
+          <li *ngIf="artisan.website"><strong>Site web :</strong> <a href="{{ artisan.website }}" target="_blank">{{ artisan.website }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row">
+      <div class="col-12">
+        <h3>Formulaire de contact</h3>
+        <p>Envoyez un message directement à l'artisan.</p>
+        <form (ngSubmit)="submitForm()">
+          <div class="mb-3">
+            <label for="contactName" class="form-label">Votre nom</label>
+            <input type="text" class="form-control" id="contactName" name="contactName" [(ngModel)]="contactForm.name" required>
+          </div>
+          <div class="mb-3">
+            <label for="contactSubject" class="form-label">Objet</label>
+            <input type="text" class="form-control" id="contactSubject" name="contactSubject" [(ngModel)]="contactForm.subject" required>
+          </div>
+          <div class="mb-3">
+            <label for="contactMessage" class="form-label">Message</label>
+            <textarea class="form-control" id="contactMessage" name="contactMessage" [(ngModel)]="contactForm.message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <a [routerLink]="['/artisans']" class="btn btn-secondary">Retour à la liste des artisans</a>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!artisan">
+    <p class="text-center">Artisan introuvable.</p>
+  </div>
+</div>

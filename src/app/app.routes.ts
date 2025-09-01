@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home';
 import { Artisans } from './pages/artisans/artisans';
-import { ArtisanDetailComponent } from './pages/artisan-detail/artisan-detail';
+import { ArtisanDetailComponent } from './pages/artisan-detail/artisan-detail.component';
 import { LegalComponent } from './pages/legal/legal';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found';
 

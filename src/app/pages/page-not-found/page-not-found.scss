@@ -1,0 +1,37 @@
+.container {
+  min-height: 70vh; // Pour centrer le contenu verticalement sur la page
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-primary {
+  color: #007bff; // Couleur principale de Bootstrap ou de ton thème
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.bi-tools, .bi-house-door-fill, .bi-hammer {
+  font-size: 3rem; // Ajuste la taille de l'icône
+}
+
+// Styles pour les boutons si tu veux les personnaliser davantage
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  &:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+  &:hover {
+    background-color: #6c757d;
+    color: white;
+  }
+}
